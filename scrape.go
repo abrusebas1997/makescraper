@@ -6,6 +6,13 @@ import (
 	"github.com/gocolly/colly"
 )
 
+type food struct {
+	Name string `json:"name"`
+	Price int `json:"price"`
+	Rating string `json:"rating"`
+	Image string `json:"image"`
+}
+
 // main() contains code adapted from example found in Colly's docs:
 // http://go-colly.org/docs/examples/basic/
 func main() {
