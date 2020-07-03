@@ -13,6 +13,12 @@ type food struct {
 	Image string `json:"image"`
 }
 
+func writeFile(file []byte) {
+	this := ioutil.WriteFile("file.json", file, 0644)
+	if err := this; err != nil {
+		panic(err)
+	}
+}
 // main() contains code adapted from example found in Colly's docs:
 // http://go-colly.org/docs/examples/basic/
 func main() {
